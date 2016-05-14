@@ -15,6 +15,12 @@
 		072F958F1CE67CC3006B7D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072F958D1CE67CC3006B7D26 /* Main.storyboard */; };
 		072F95911CE67CC3006B7D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 072F95901CE67CC3006B7D26 /* Assets.xcassets */; };
 		072F95941CE67CC3006B7D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 072F95921CE67CC3006B7D26 /* LaunchScreen.storyboard */; };
+		072F959E1CE67D66006B7D26 /* WalletModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 072F959C1CE67D66006B7D26 /* WalletModel.xcdatamodeld */; };
+		072F95A31CE67F82006B7D26 /* Wallet+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F95A01CE67F82006B7D26 /* Wallet+CoreDataProperties.m */; };
+		072F95A41CE67F82006B7D26 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F95A21CE67F82006B7D26 /* Wallet.m */; };
+		072F95A81CE6807B006B7D26 /* WalletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F95A71CE6807B006B7D26 /* WalletManager.m */; };
+		072F95AB1CE682A9006B7D26 /* CoreDataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F95AA1CE682A9006B7D26 /* CoreDataUtils.m */; };
+		072F95AE1CE6A37F006B7D26 /* WalletDisplayDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 072F95AD1CE6A37F006B7D26 /* WalletDisplayDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,17 @@
 		072F95901CE67CC3006B7D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		072F95931CE67CC3006B7D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		072F95951CE67CC3006B7D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		072F959D1CE67D66006B7D26 /* WalletModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WalletModel.xcdatamodel; sourceTree = "<group>"; };
+		072F959F1CE67F82006B7D26 /* Wallet+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Wallet+CoreDataProperties.h"; sourceTree = "<group>"; };
+		072F95A01CE67F82006B7D26 /* Wallet+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Wallet+CoreDataProperties.m"; sourceTree = "<group>"; };
+		072F95A11CE67F82006B7D26 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		072F95A21CE67F82006B7D26 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
+		072F95A61CE6807B006B7D26 /* WalletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletManager.h; sourceTree = "<group>"; };
+		072F95A71CE6807B006B7D26 /* WalletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletManager.m; sourceTree = "<group>"; };
+		072F95A91CE682A9006B7D26 /* CoreDataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataUtils.h; sourceTree = "<group>"; };
+		072F95AA1CE682A9006B7D26 /* CoreDataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataUtils.m; sourceTree = "<group>"; };
+		072F95AC1CE6A37F006B7D26 /* WalletDisplayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletDisplayDelegate.h; sourceTree = "<group>"; };
+		072F95AD1CE6A37F006B7D26 /* WalletDisplayDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletDisplayDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,15 +83,10 @@
 			children = (
 				072F95811CE67CC3006B7D26 /* AppDelegate.h */,
 				072F95821CE67CC3006B7D26 /* AppDelegate.m */,
-				072F95841CE67CC3006B7D26 /* RootViewController.h */,
-				072F95851CE67CC3006B7D26 /* RootViewController.m */,
-				072F95871CE67CC3006B7D26 /* DataViewController.h */,
-				072F95881CE67CC3006B7D26 /* DataViewController.m */,
-				072F958A1CE67CC3006B7D26 /* ModelController.h */,
-				072F958B1CE67CC3006B7D26 /* ModelController.m */,
-				072F958D1CE67CC3006B7D26 /* Main.storyboard */,
+				072F95A51CE67F8F006B7D26 /* Model */,
+				072F959B1CE67D12006B7D26 /* Controller */,
+				072F95AF1CE6A3B5006B7D26 /* View */,
 				072F95901CE67CC3006B7D26 /* Assets.xcassets */,
-				072F95921CE67CC3006B7D26 /* LaunchScreen.storyboard */,
 				072F95951CE67CC3006B7D26 /* Info.plist */,
 				072F957E1CE67CC3006B7D26 /* Supporting Files */,
 			);
@@ -87,6 +99,47 @@
 				072F957F1CE67CC3006B7D26 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		072F959B1CE67D12006B7D26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				072F95841CE67CC3006B7D26 /* RootViewController.h */,
+				072F95851CE67CC3006B7D26 /* RootViewController.m */,
+				072F95871CE67CC3006B7D26 /* DataViewController.h */,
+				072F95881CE67CC3006B7D26 /* DataViewController.m */,
+				072F95AC1CE6A37F006B7D26 /* WalletDisplayDelegate.h */,
+				072F95AD1CE6A37F006B7D26 /* WalletDisplayDelegate.m */,
+				072F958A1CE67CC3006B7D26 /* ModelController.h */,
+				072F958B1CE67CC3006B7D26 /* ModelController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		072F95A51CE67F8F006B7D26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				072F959C1CE67D66006B7D26 /* WalletModel.xcdatamodeld */,
+				072F95A91CE682A9006B7D26 /* CoreDataUtils.h */,
+				072F95AA1CE682A9006B7D26 /* CoreDataUtils.m */,
+				072F959F1CE67F82006B7D26 /* Wallet+CoreDataProperties.h */,
+				072F95A01CE67F82006B7D26 /* Wallet+CoreDataProperties.m */,
+				072F95A11CE67F82006B7D26 /* Wallet.h */,
+				072F95A21CE67F82006B7D26 /* Wallet.m */,
+				072F95A61CE6807B006B7D26 /* WalletManager.h */,
+				072F95A71CE6807B006B7D26 /* WalletManager.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		072F95AF1CE6A3B5006B7D26 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				072F958D1CE67CC3006B7D26 /* Main.storyboard */,
+				072F95921CE67CC3006B7D26 /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +212,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072F95A81CE6807B006B7D26 /* WalletManager.m in Sources */,
 				072F95891CE67CC3006B7D26 /* DataViewController.m in Sources */,
 				072F95831CE67CC3006B7D26 /* AppDelegate.m in Sources */,
+				072F959E1CE67D66006B7D26 /* WalletModel.xcdatamodeld in Sources */,
+				072F95AB1CE682A9006B7D26 /* CoreDataUtils.m in Sources */,
+				072F95AE1CE6A37F006B7D26 /* WalletDisplayDelegate.m in Sources */,
 				072F958C1CE67CC3006B7D26 /* ModelController.m in Sources */,
+				072F95A41CE67F82006B7D26 /* Wallet.m in Sources */,
 				072F95801CE67CC3006B7D26 /* main.m in Sources */,
+				072F95A31CE67F82006B7D26 /* Wallet+CoreDataProperties.m in Sources */,
 				072F95861CE67CC3006B7D26 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +375,20 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		072F959C1CE67D66006B7D26 /* WalletModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				072F959D1CE67D66006B7D26 /* WalletModel.xcdatamodel */,
+			);
+			currentVersion = 072F959D1CE67D66006B7D26 /* WalletModel.xcdatamodel */;
+			name = WalletModel.xcdatamodeld;
+			path = LeagueWallet/WalletModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 072F95731CE67CC3006B7D26 /* Project object */;
 }

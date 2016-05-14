@@ -9,6 +9,8 @@
 #import "RootViewController.h"
 #import "ModelController.h"
 #import "DataViewController.h"
+#import "WalletManager.h"
+#import "Wallet.h"
 
 @interface RootViewController ()
 
@@ -43,6 +45,18 @@
     self.pageViewController.view.frame = pageViewRect;
 
     [self.pageViewController didMoveToParentViewController:self];
+    
+    [WalletManager walletDataWithCompletionBlock:^(NSArray<Wallet *> * _Nullable results) {
+        if (results) {
+            //update model controller
+            [self.modelController updateWithData:results];
+            //update ui
+            NSArray *viewControllers = @[[self.modelController viewControllerAtIndex:0 storyboard:self.storyboard]];
+            [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+        }
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,6 +76,11 @@
 #pragma mark - UIPageViewController delegate methods
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation {
+    
+    if (self.pageViewController.viewControllers.count == 0) {
+        return UIPageViewControllerSpineLocationMax;
+    }
+
     if (UIInterfaceOrientationIsPortrait(orientation) || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)) {
         // In portrait orientation or on iPhone: Set the spine position to "min" and the page view controller's view controllers array to contain just one view controller. Setting the spine position to 'UIPageViewControllerSpineLocationMid' in landscape orientation sets the doubleSided property to YES, so set it to NO here.
         

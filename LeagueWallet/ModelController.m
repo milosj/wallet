@@ -9,6 +9,7 @@
 #import "ModelController.h"
 #import "DataViewController.h"
 
+
 /*
  A controller object that manages a simple model -- a collection of month names.
  
@@ -21,7 +22,7 @@
 
 @interface ModelController ()
 
-@property (readonly, strong, nonatomic) NSArray *pageData;
+@property (strong, nonatomic) NSArray *pageData;
 @end
 
 @implementation ModelController
@@ -29,16 +30,20 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // Create the data model.
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        _pageData = [[dateFormatter monthSymbols] copy];
+        
     }
     return self;
 }
 
 - (DataViewController *)viewControllerAtIndex:(NSUInteger)index storyboard:(UIStoryboard *)storyboard {
     // Return the data view controller for the given index.
-    if (([self.pageData count] == 0) || (index >= [self.pageData count])) {
+    
+    if ([self.pageData count] == 0) {
+        UIViewController* loadingVC = [storyboard instantiateViewControllerWithIdentifier:@"LoadingViewController"];
+        return loadingVC;
+    }
+    
+    if (index >= [self.pageData count]) {
         return nil;
     }
 
@@ -81,4 +86,7 @@
     return [self viewControllerAtIndex:index storyboard:viewController.storyboard];
 }
 
+- (void)updateWithData:(NSArray<Wallet *> *)data {
+    self.pageData = data;
+}
 @end
