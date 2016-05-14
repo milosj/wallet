@@ -39,7 +39,7 @@
     // Return the data view controller for the given index.
     
     if ([self.pageData count] == 0) {
-        UIViewController* loadingVC = [storyboard instantiateViewControllerWithIdentifier:@"LoadingViewController"];
+        DataViewController* loadingVC = [storyboard instantiateViewControllerWithIdentifier:@"LoadingViewController"]; //yes I did that just to suppress the warning
         return loadingVC;
     }
     

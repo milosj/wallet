@@ -12,7 +12,6 @@
 
 @interface DataViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *dataLabel;
 @property (strong, nonatomic) Wallet* dataObject;
 
 @end

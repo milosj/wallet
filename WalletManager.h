@@ -13,6 +13,6 @@
 @interface WalletManager : NSObject
 
 + (void)walletDataWithCompletionBlock:(nullable void (^) (NSArray<Wallet*>* _Nullable results))completionHandler;
-+ (NSArray<Wallet*>*)wallets;
++ (nullable NSArray<Wallet*>*)wallets;
 
 @end

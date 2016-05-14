@@ -111,7 +111,7 @@ static dispatch_once_t *onceToken;
     
     SharedStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"LeagueWallet.sqlite"];
-    NSLog(@"DB path: %@", storeURL);
+//    NSLog(@"DB path: %@", storeURL);
 
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";

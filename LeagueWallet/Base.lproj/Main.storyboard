@@ -67,7 +67,7 @@
                                 <rect key="frame" x="20" y="125" width="560" height="350"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvA-7m-diT">
-                                        <rect key="frame" x="209.5" y="20" width="141.5" height="19.5"/>
+                                        <rect key="frame" x="209" y="20" width="141.5" height="19.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -84,17 +84,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvv-4e-sIU">
-                                        <rect key="frame" x="126" y="270.5" width="308.5" height="59.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvv-4e-sIU" userLabel="Current date View">
+                                        <rect key="frame" x="126" y="270" width="308.5" height="59.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effective" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDm-fn-PCN">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effective" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDm-fn-PCN">
                                                 <rect key="frame" x="20" y="20" width="63.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apr 21 1201 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uw-xb-dwc">
-                                                <rect key="frame" x="91.5" y="20" width="86.5" height="19.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apr 21 1201 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uw-xb-dwc">
+                                                <rect key="frame" x="91" y="20" width="86.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -105,7 +105,7 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apr 21 1201 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-Xb-Qfr">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="apr 21 1201 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebY-Xb-Qfr">
                                                 <rect key="frame" x="202" y="20" width="86.5" height="19.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,19 +132,54 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39y-CY-D2O" userLabel="Future date View">
+                                        <rect key="frame" x="107.5" y="270" width="345.5" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This account will activate on" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nb-2j-bhI">
+                                                <rect key="frame" x="20" y="19.5" width="205" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 april 2016" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KE-RK-95H">
+                                                <rect key="frame" x="233" y="20" width="92.5" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="5Nb-2j-bhI" firstAttribute="centerY" secondItem="39y-CY-D2O" secondAttribute="centerY" id="85R-dR-ase"/>
+                                            <constraint firstAttribute="trailing" secondItem="6KE-RK-95H" secondAttribute="trailing" constant="20" symbolic="YES" id="92l-8N-qQG"/>
+                                            <constraint firstAttribute="bottom" secondItem="6KE-RK-95H" secondAttribute="bottom" constant="20" symbolic="YES" id="PaT-ny-pdF"/>
+                                            <constraint firstItem="6KE-RK-95H" firstAttribute="leading" secondItem="5Nb-2j-bhI" secondAttribute="trailing" constant="8" symbolic="YES" id="SFd-dJ-c8M"/>
+                                            <constraint firstItem="6KE-RK-95H" firstAttribute="top" secondItem="39y-CY-D2O" secondAttribute="top" constant="20" symbolic="YES" id="peB-ql-bWy"/>
+                                            <constraint firstItem="5Nb-2j-bhI" firstAttribute="leading" secondItem="39y-CY-D2O" secondAttribute="leading" constant="20" symbolic="YES" id="veM-I6-77f"/>
+                                            <constraint firstItem="6KE-RK-95H" firstAttribute="centerY" secondItem="39y-CY-D2O" secondAttribute="centerY" id="xx3-be-5bx"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="8W3-f7-q4u" firstAttribute="top" secondItem="Cc0-hf-lzt" secondAttribute="bottom" constant="8" symbolic="YES" id="0KH-fX-SY9"/>
                                     <constraint firstItem="cvA-7m-diT" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="27t-3C-kEa"/>
                                     <constraint firstItem="8W3-f7-q4u" firstAttribute="centerY" secondItem="s1b-V9-EN7" secondAttribute="centerY" id="3rD-gf-Kyc"/>
+                                    <constraint firstAttribute="bottom" secondItem="39y-CY-D2O" secondAttribute="bottom" constant="20" symbolic="YES" id="4q8-eX-gzt"/>
                                     <constraint firstAttribute="bottom" secondItem="gvv-4e-sIU" secondAttribute="bottom" constant="20" symbolic="YES" id="6Ki-V8-5E4"/>
+                                    <constraint firstItem="39y-CY-D2O" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="Ppq-ey-sy8"/>
                                     <constraint firstItem="8W3-f7-q4u" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="R4F-7o-AHx"/>
                                     <constraint firstItem="cvA-7m-diT" firstAttribute="top" secondItem="s1b-V9-EN7" secondAttribute="top" constant="20" symbolic="YES" id="Vkg-Rw-wW0"/>
                                     <constraint firstAttribute="width" secondItem="s1b-V9-EN7" secondAttribute="height" multiplier="8:5" id="iyO-vx-jO8"/>
+                                    <constraint firstItem="gvv-4e-sIU" firstAttribute="top" secondItem="39y-CY-D2O" secondAttribute="bottom" constant="8" symbolic="YES" id="rIK-c5-b6H"/>
                                     <constraint firstItem="Cc0-hf-lzt" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="ssg-bj-c5p"/>
                                     <constraint firstItem="gvv-4e-sIU" firstAttribute="centerX" secondItem="s1b-V9-EN7" secondAttribute="centerX" id="zih-5L-Dey"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rIK-c5-b6H"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -159,8 +194,11 @@
                         <outlet property="accountType" destination="cvA-7m-diT" id="z2F-KT-o3E"/>
                         <outlet property="balance" destination="8W3-f7-q4u" id="Fjm-bw-5X1"/>
                         <outlet property="cardView" destination="s1b-V9-EN7" id="NHA-CU-RjC"/>
+                        <outlet property="currentDateView" destination="gvv-4e-sIU" id="A0z-iq-cSK"/>
                         <outlet property="endDate" destination="ebY-Xb-Qfr" id="DQT-8T-QQQ"/>
+                        <outlet property="futureDateView" destination="39y-CY-D2O" id="ZkF-oC-2lY"/>
                         <outlet property="startDate" destination="0uw-xb-dwc" id="zNJ-Pj-35R"/>
+                        <outlet property="startFutureDate" destination="6KE-RK-95H" id="B78-Am-7JA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmD-Rr-ZGN" sceneMemberID="firstResponder"/>

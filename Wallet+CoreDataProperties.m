@@ -20,5 +20,6 @@
 @dynamic currency;
 @dynamic policyEndDate;
 @dynamic policyStartDate;
+@dynamic order;
 
 @end

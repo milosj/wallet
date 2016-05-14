@@ -79,13 +79,14 @@
     NSManagedObjectContext *context = [CoreDataUtils managedObjectContext];
     
     NSArray* allWallets = ((NSDictionary*)walletData[@"info"])[@"cards"];
-    
+    int index = 0;
     for (NSDictionary* singleWalletJsonData in allWallets) {
         @try {
             Wallet* wallet = [WalletManager walletFromData:singleWalletJsonData inContext:context];
             if (wallet) {
-                
+                wallet.order = [NSNumber numberWithInt:index];
             }
+            index++;
         } @catch (NSException* ex) {
             
         }
@@ -145,7 +146,7 @@
     
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:kWalletEntity];
-    NSSortDescriptor *typeSort = [[NSSortDescriptor alloc] initWithKey:@"walletType" ascending:YES selector:nil];
+    NSSortDescriptor *typeSort = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES selector:nil];
     request.sortDescriptors = @[typeSort];
 
     NSMutableArray* predicates = [NSMutableArray new];

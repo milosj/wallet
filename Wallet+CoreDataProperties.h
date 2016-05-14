@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *currency;
 @property (nullable, nonatomic, retain) NSDate *policyEndDate;
 @property (nullable, nonatomic, retain) NSDate *policyStartDate;
+@property (nullable, nonatomic, retain) NSNumber *order;
 
 @end
 
